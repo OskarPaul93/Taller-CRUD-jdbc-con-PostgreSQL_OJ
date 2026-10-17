@@ -31,7 +31,7 @@ public class UpdateVehiculo {
 			ps= con.prepareStatement(sql);
 			
 			ps.setString(1, "KIA");
-			ps.setString(2, "SOLUTO - Nuevo");
+			ps.setString(2, "SOLUTO - SemiNuevo");
 			ps.setInt(3, 2026);
 			ps.setDouble(4, 16500.99);
 			ps.setString(5, "Gris");

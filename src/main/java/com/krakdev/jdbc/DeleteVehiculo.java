@@ -26,8 +26,8 @@ public class DeleteVehiculo {
 			
 			int filas =ps.executeUpdate();
 			
+			
 			log.info("Vehiculo Eliminado");
-
 			log.info("Filas eliminadas: " + filas);
 
 			
