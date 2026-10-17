@@ -29,7 +29,7 @@ public class SelectVehiculo {
 					""";
 			ps= con.prepareStatement(sql);
 			rs= ps.executeQuery();
-			
+			log.info("Vehiculo Actualizado");
 			while(rs.next()) {
 				String placa= rs.getString("placa");
 				String marca= rs.getString("marca");
@@ -40,6 +40,7 @@ public class SelectVehiculo {
 				boolean disponible= rs.getBoolean("disponible");
 				
 				
+
 				log.info("Vehiculo: placa: " + placa + " Marca: " + marca + " Modelo: " + modelo + " anio: " + anio + " Precio: " + precio + " Color: " + color + " Disponible: " + disponible);
 
 			}

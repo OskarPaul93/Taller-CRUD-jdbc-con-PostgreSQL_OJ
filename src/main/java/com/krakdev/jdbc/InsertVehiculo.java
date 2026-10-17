@@ -32,9 +32,9 @@ public class InsertVehiculo {
 		try {
 			con= DriverManager.getConnection(URL, USER, PASSWORD);
 			ps= con.prepareStatement(sql);
-			ps.setString(1, "5522334455");
+			ps.setString(1, "7722334488");
 			ps.setString(2, "KIA");
-			ps.setString(3, "SOLUTO");
+			ps.setString(3, "Sportage");
 			ps.setInt(4, 2026);
 			ps.setDouble(5, 16000.5);
 			ps.setString(6, "Gris");
@@ -43,6 +43,7 @@ public class InsertVehiculo {
 			int filas= ps.executeUpdate();
 			
 			log.info("Conexion Exitosa");
+			log.info("Vehiculo Insertado");
 			log.info("Filas insertadas: "+ filas);
 			
 			

@@ -21,10 +21,13 @@ public class DeleteVehiculo {
 			String sql ="DELETE FROM vehiculos WHERE placa=?";
 			ps=con.prepareStatement(sql);
 			
-			ps.setString(1,"1122334455");
+			ps.setString(1,"1122334499");
 			
 			
 			int filas =ps.executeUpdate();
+			
+			log.info("Vehiculo Eliminado");
+
 			log.info("Filas eliminadas: " + filas);
 
 			
