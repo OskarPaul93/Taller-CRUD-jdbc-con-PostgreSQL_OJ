@@ -32,12 +32,12 @@ public class InsertVehiculo {
 		try {
 			con= DriverManager.getConnection(URL, USER, PASSWORD);
 			ps= con.prepareStatement(sql);
-			ps.setString(1, "1122334455");
-			ps.setString(2, "TOYOTA");
-			ps.setString(3, "HILUX");
+			ps.setString(1, "5522334455");
+			ps.setString(2, "KIA");
+			ps.setString(3, "SOLUTO");
 			ps.setInt(4, 2026);
-			ps.setInt(5, 30000);
-			ps.setString(6, "Negro");
+			ps.setDouble(5, 16000.5);
+			ps.setString(6, "Gris");
 			ps.setBoolean (7, true);
 			
 			int filas= ps.executeUpdate();
