@@ -21,8 +21,8 @@ public class InsertVehiculo {
 		Connection con=null;
 		PreparedStatement ps;
 		String sql= """  
-				INSERT INTO vehiculos (placa, marca, modelo, anio, precio, color, disponible)
-				VALUES(?,?,?,?,?,?,?)
+				INSERT INTO vehiculos (placa, marca, modelo, anio, precio, color, disponible, kilometraje)
+				VALUES(?,?,?,?,?,?,?,?)
 				""";
 		//Aqui me aparece un erro pero lo puedo mandar a try catch
 		//ps= con.prepareStatement(sql);
@@ -32,13 +32,14 @@ public class InsertVehiculo {
 		try {
 			con= DriverManager.getConnection(URL, USER, PASSWORD);
 			ps= con.prepareStatement(sql);
-			ps.setString(1, "7722334400");
+			ps.setString(1, "9922334400");
 			ps.setString(2, "AUDI");
 			ps.setString(3, "Sportage");
 			ps.setInt(4, 2026);
 			ps.setDouble(5, 36000.5);
 			ps.setString(6, "Gris");
 			ps.setBoolean (7, true);
+			ps.setInt(8, 10);
 			
 			int filas= ps.executeUpdate();
 			
